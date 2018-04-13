@@ -7,24 +7,28 @@ import './assets/style/App.css';
 import Header from './components/Header';
 import Home from './containers/Home';
 import Time from './containers/Time/index';
+import Login from './components/Login';
 // import Towns from './containers/Towns';
 
 class App extends Component {
-  render() {
-    return (
-      <Router>
-        <div className="App">
-          <Header/>
+    render() {
+        return (
+            <Router>
+                <div className="App">
+                    <Header/>
 
 
-          <Route exact path="/" component={Home} />
-          <Route path="/time" component={Time} />
-          {/*<Route path="/towns" component={Towns} />*/}
+                    <Route exact path="/" component={Home} />
+                    <Route path="/time" component={Time} />
+                    <Route path="/login" component={Login} />
 
-        </div>
-      </Router>
-    );
-  }
+                    {/*<Route path="/towns" component={Towns} />*/}
+
+                </div>
+            </Router>
+        );
+    }
 }
 
 export default App;
+

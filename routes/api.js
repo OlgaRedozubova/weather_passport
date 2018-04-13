@@ -12,6 +12,51 @@ const jsonParser = bodyParser.json();
 const uriWeather = "http://openweathermap.org/data/2.5/weather";
 const appid = "b6907d289e10d714a6e88b30761fae22";
 
+//-----------
+const _ = require("lodash");
+const jwt = require('jsonwebtoken');
+const passport = require("passport");
+const passportJWT = require("passport-jwt");
+
+const ExtractJwt = passportJWT.ExtractJwt;
+const JwtStrategy = passportJWT.Strategy;
+
+const users = [
+    {
+        id: 1,
+        name: 'jonathanmh',
+        password: '%2yx4'
+    },
+    {
+        id: 2,
+        name: 'test',
+        password: 'test'
+    }
+];
+
+var jwtOptions = {}
+jwtOptions.jwtFromRequest = ExtractJwt.fromAuthHeader();
+jwtOptions.secretOrKey = 'tasmanianDevil';
+
+var strategy = new JwtStrategy(jwtOptions, function(jwt_payload, next) {
+    console.log('payload received', jwt_payload);
+    // usually this would be a database call:
+    var user = users[_.findIndex(users, {id: jwt_payload.id})];
+    if (user) {
+        next(null, user);
+    } else {
+        next(null, false);
+    }
+});
+
+passport.use(strategy);
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+
+// parse application/json
+app.use(bodyParser.json());
 
 
 // routerWeather.route("/")
@@ -151,6 +196,45 @@ router.route("/weather/")
         }
     );
 
+router.route('/login').post(jsonParser, (req, res) => {
+    console.log('login');
+    if (!req.body) return res.sendStatus(400);
+    if(req.body.name && req.body.password){
+        const name = req.body.name;
+        const password = req.body.password;
+    }
+    const user = users[_.findIndex(users, {name: name})];
+
+    if( ! user ){
+        res.status(401).json({message:"no such user found"});
+    }
+
+    if(user.password === req.body.password) {
+        // from now on we'll identify the user by the id and the id is the only personalized value that goes into our token
+        const payload = {id: user.id};
+        //const token = jwt.sign({user}, 'my_secret_key');
+        const token = jwt.sign(payload, jwtOptions.secretOrKey);
+
+        res.json({message: "ok", token: token});
+    } else {
+        res.status(401).json({message:"passwords did not match"});
+    }
+
+    // const user = req.body;
+    //
+    // console.log('userName', user.user);
+    // console.log('userPassword', user.password);
+    //
+    // const token = jwt.sign({user}, 'my_secret_key');
+    // res.json({
+    //     token: token
+    // });
+    // console.log('token', token);
+    // const user = {
+    //     user: '',
+    //     password: ''
+    // }
+});
 
 router.route("/weather/:id")
     .get( function (req, res) {
@@ -224,6 +308,8 @@ router.route("/towns/")
 
         }
     );
+
+
 
 module.exports = router;
 
