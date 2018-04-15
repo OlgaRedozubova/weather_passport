@@ -13,7 +13,15 @@ const params = {
 
 module.exports = function() {
     var strategy = new Strategy(params, function(payload, done) {
-        var user = users[payload.id] || null;
+        var user = null;
+        console.log('auth-payload.id', payload.id);
+        for (key in users) {
+         if (users[key].id === payload.id) {
+             user = users[key];
+             console.log('user', user);
+         }
+        }
+
         if (user) {
             return done(null, {
                 id: user.id

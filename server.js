@@ -3,8 +3,9 @@ const bodyParser = require("body-parser");
 const jsonParser = bodyParser.json();
 //const jwt = require('jsonwebtoken');
 const jwt = require("jwt-simple");
-const auth = require("./auth.js")();
-const users = require("./db/users.js");
+
+const auth = require("./auth.js")(); //passport/ passport-jwt
+const users = require("./db/users.js"); //users
 const config = require("./config/config.js");
 
 
@@ -31,9 +32,18 @@ server.use(auth.initialize());
 
 
 server.get("/api/user", auth.authenticate(), function(req, res) {
-    res.json(users[req.user.id]);
+    console.log('server-users', users);
+    for (key in users) {
+      if (users[key].id === req.user.id) {
+        console.log('users[key]', users[key]);
+        res.json(users[key]);
+      }
+    }
+    //console.log('server-req-user', req.user);
+//    res.json(users[req.user.id]);
 });
 
+//возвращает token и id user
 server.post("/api/token", function(req, res) {
     if (req.body.name && req.body.password) {
         var userName = req.body.name;
@@ -45,6 +55,7 @@ server.post("/api/token", function(req, res) {
             var payload = {
                 id: user.id
             };
+            console.log('id', payload.id);
             var token = jwt.encode(payload, config.jwtSecret);
             res.json({
                 token: token
