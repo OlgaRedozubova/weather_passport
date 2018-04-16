@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
-
-
 import './assets/style/App.css';
 
 import Header from './components/Header';
+
 import Home from './containers/Home';
 import Time from './containers/Time/index';
 import Login from './components/Login';
 // import Towns from './containers/Towns';
+
+
 
 class App extends Component {
     render() {
@@ -16,7 +17,6 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <Header/>
-
 
                     <Route exact path="/" component={Home} />
                     <Route path="/time" component={Time} />

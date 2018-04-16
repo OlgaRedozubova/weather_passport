@@ -24,6 +24,7 @@
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "concurrently": "^3.5.0"
+    "concurrently": "^3.5.0",
+    "remote-redux-devtools": "^0.5.12"
   }
 }

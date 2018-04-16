@@ -1,12 +1,27 @@
 import React, { Component } from 'react';
 
-class Login extends Component {
+import { connect } from 'react-redux';
+import * as action from '../../redux/actions/actions';
+import * as types from '../../constants/ActionTypes';
 
-        state = {
-            user: '',
-            password: '',
-            token: ''
+
+
+class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+                user: '',
+                password: '',
+                token: '',
+                value1: 1
         };
+    }
+
+        // state = {
+        //     user: '',
+        //     password: '',
+        //     token: ''
+        // };
 
     Auth = async () => {
         const  response = await fetch('/api/token', {
@@ -113,9 +128,18 @@ class Login extends Component {
     //
     // };
 
+    onAddTodoClick = () => {
+        var value = this.state.value1;
+        value += 1;
+        this.props.onAddTodo(value);
+        console.log('----1', this.props);
+        // console.log('this.state.value',  this.state.value);
+        // this.props.onAddTodo(this.state.value);
+    }
+
     render() {
 // make the request to the secret API endpoint
-
+console.log('----', this.props);
         return (
             <div>
                 <h2>Login in</h2>
@@ -146,6 +170,7 @@ class Login extends Component {
 
                 <button onClick={this.getSecret.bind(this)}>get secret message</button>
                 <div id="result"></div>
+                <button onClick={this.onAddTodoClick}>Redux</button>*
             </div>
         );
     }
@@ -154,4 +179,29 @@ class Login extends Component {
 // We’re using the mixin `LinkStateMixin` to have two-way databinding between our component and the HTML.
 //reactMixin(Login.prototype, React.addons.LinkedStateMixin);
 
-export default Login;
+//export default Login;
+
+//как трансформировать текущее Redux-состояние хранилища в props
+const mapStateToProps = (state) => {
+    console.log('mapStateToProps', state.counterReducer.value1);
+    return {
+        value1: state.counterReducer.value1,
+    }
+};
+//mapDispatchToProps(), которая получает метод dispatch() и возвращает колбек props, который вы можете вставить в представление
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onAddTodo: (value) => {
+           // console.log('value', value);
+            dispatch(action.addTodo(value)
+                // {
+                //     type: 'INCREMENT_COUNTER',
+                //     value1: value
+                // }
+                )
+        }
+        //deleteContact: index => dispatch(contactAction.deleteContact(index))
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login);
