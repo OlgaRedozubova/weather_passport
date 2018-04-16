@@ -11,7 +11,22 @@ import { map } from 'rxjs/operators/map'
 
 import cofigureStore from './redux/Store/configureStore';
 
+import * as actions from './redux/actions/track';
+
+const tracks = [
+    {
+        title: 'Some track'
+    },
+    {
+        title: 'Some other track'
+    }
+];
+
+
 const store = cofigureStore();
+store.dispatch(actions.setTracks(tracks));
+
+
 //
 // function getState$(store) {
 //     return new Observable(function (observer) {

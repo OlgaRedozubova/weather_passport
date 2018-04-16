@@ -11,3 +11,5 @@ export  const  INCREMENT_COUNTER = "INCREMENT_COUNTER";
 
 export const AUTH = 'AUTH';
 export const ME_SET = 'ME_SET';
+
+export const TRACKS_SET = 'TRACKS_SET';

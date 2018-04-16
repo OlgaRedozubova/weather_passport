@@ -11,6 +11,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
     "rx-connect": "^0.7.0",
     "rxjs": "^5.5.8",
     "rxjs-react-component": "^0.2.5"

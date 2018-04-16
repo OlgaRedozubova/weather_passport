@@ -5,6 +5,8 @@ import {AUTH_REQUEST, AUTH_SUCCESS, AUTH_FAILURE } from '../../constants/ActionT
 
 import { combineReducers } from 'redux';
 
+import track from './track';
+
 const INITIAL_STATE = {};
 
 // export const user = (state = INITIAL_STATE, action) => {
@@ -59,6 +61,7 @@ export const counterReducer = (state = INITIAL_STATE_C, action) => {
 //export default counterReducer;
 export default combineReducers({
     //user,
+    track,
     authReducer,
     counterReducer
 });

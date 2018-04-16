@@ -1,6 +1,12 @@
-import { auth, loadUser, loadSite, loadPages } from '../../api/api';
-import { openWebsockets } from 'my-websockets';
+//epics - Это функция, которая принимает поток действий и возвращает поток действий.
 
+import { auth, loadUser, loadSite, loadPages } from 'auth';
+import { openWebsockets } from 'my-websockets';
+import { ajax } from 'rxjs/observable/dom/ajax';
+
+//const { ajax } = Rx.Observable;
+
+//слушает действие и возвращает token
 export const loadUserOnAuth = (action$) =>
     action$
         .ofType('AUTH_SUCCESS')
@@ -20,11 +26,34 @@ export const loadSiteAndPagesOnAuth = (action$) =>
 ))
 
 
-export function auth(username, password) {
-    return function thunk(dispatch, getState) {
-        dispatch({ type: 'AUTH_REQUEST' })
-        return $.post('/login', { username, password })
-            .then(() => dispatch({ type: 'AUTH_SUCCESS' }))
-            .catch(() => dispatch({ type: 'AUTH_FAILURE' }))
+const FETCH_USER = 'FETCH_USER';
+const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED';
+// action creators
+const fetchUser = username => ({ type: FETCH_USER, payload: username });
+const fetchUserFulfilled = payload => ({ type: FETCH_USER_FULFILLED, payload });
+
+// epic
+const fetchUserEpic = action$ =>
+    action$.ofType(FETCH_USER)
+        .mergeMap(action =>
+            ajax.getJSON(`https://api.github.com/users/${action.payload}`)
+                .map(response => fetchUserFulfilled(response))
+        );
+
+const users = (state = {}, action) => {
+    switch (action.type) {
+        case FETCH_USER_FULFILLED:
+            return {
+                ...state,
+                // `login` is the username
+                [action.payload.login]: action.payload
+            };
+
+        default:
+            return state;
     }
-}
+};
+
+// later...
+dispatch(fetchUser('torvalds'));
+
