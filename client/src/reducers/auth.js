@@ -1,4 +1,4 @@
-import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET} from "../constants/ActionTypes";
+import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_SECRET_OK} from "../constants/ActionTypes";
 
 const INITIAL_STATE = {};
 
@@ -25,6 +25,11 @@ export const authReducer = (state = INITIAL_STATE, action) => {
         case AUTH_SECRET:
             return {
                 mass: 'Secret',
+                payload: action.payload
+            };
+        case AUTH_SECRET_OK:
+            return {
+                mass: 'Yes! It is Secret!!',
                 payload: action.payload
             };
         case  AUTH_FAILURE:

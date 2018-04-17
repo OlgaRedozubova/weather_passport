@@ -1,4 +1,4 @@
-import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET} from "../constants/ActionTypes";
+import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_SECRET_OK} from "../constants/ActionTypes";
 
 export const ping = () => ({type: 'PING'});
 
@@ -49,6 +49,13 @@ export const fetchSecret = token => (
         type: AUTH_SECRET,
         payload: token,
         mess: 'OK'
+    }
+);
+
+export const fetchSecretFulfilled = payload => (
+    {
+        type: AUTH_SECRET_OK,
+        payload
     }
 );
 
