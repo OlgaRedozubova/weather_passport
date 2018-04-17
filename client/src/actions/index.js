@@ -1,4 +1,4 @@
-import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS} from "../constants/ActionTypes";
+import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET} from "../constants/ActionTypes";
 
 export const ping = () => ({type: 'PING'});
 
@@ -27,6 +27,30 @@ export const auth = (username) =>(
         mess: 'OK'
     }
     );
+
+//action creator
+export const fetchUser = username => (
+    {
+        type: AUTH_REQUEST,
+        payload: username,
+        mess: 'OK'
+    }
+    );
+
+export const fetchUserFulfilled = payload => (
+    {
+        type: AUTH_TOKEN,
+        payload
+    }
+    );
+
+export const fetchSecret = token => (
+    {
+        type: AUTH_SECRET,
+        payload: token,
+        mess: 'OK'
+    }
+);
 
 // export const auth = (username) => {
 //     console.log('username', username);

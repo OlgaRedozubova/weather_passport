@@ -1,7 +1,7 @@
 //reducers Редьюсеры должны быть чистыми функциями!
 import { FETCH_USER_SUCCESS, FETCH_USER_FAILED } from '../../constants/ActionTypes';
 
-import {AUTH_REQUEST, AUTH_SUCCESS, AUTH_FAILURE } from '../../constants/ActionTypes';
+import {AUTH_REQUEST, AUTH_SUCCESS, AUTH_FAILURE, AUTH_TOKEN } from '../../constants/ActionTypes';
 
 import { combineReducers } from 'redux';
 
