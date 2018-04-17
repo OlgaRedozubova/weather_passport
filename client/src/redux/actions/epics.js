@@ -30,6 +30,7 @@ const FETCH_USER = 'FETCH_USER';
 const FETCH_USER_FULFILLED = 'FETCH_USER_FULFILLED';
 // action creators
 const fetchUser = username => ({ type: FETCH_USER, payload: username });
+
 const fetchUserFulfilled = payload => ({ type: FETCH_USER_FULFILLED, payload });
 
 // epic

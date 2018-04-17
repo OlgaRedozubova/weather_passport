@@ -2,125 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6fb87d9e-a1e0-4b2d-8b3a-c863886e65be" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/client/src/api/api.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/LoginForm/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/LoginFormContainer/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Stream/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Stream/presenter.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/components/Stream/spec.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/containers/Tracks/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/actions/actions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/actions/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/actions/track.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/client/src/redux/reducers/track.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Header/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Header/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/components/Login/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/Login/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/constants/ActionTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/constants/ActionTypes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/Store/configureStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/Store/configureStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/actions/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/actions/epics.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/actions/epics.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/src/redux/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/redux/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/client/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/concurrent" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/concurrent" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/concurrent.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/concurrently" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.bin/concurrently" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/concurrently.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/has-ansi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/has-ansi.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/mime.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-conv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-conv.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-sign" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-sign.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-verify" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/sshpk-verify.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/strip-ansi" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/strip-ansi.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/supports-color" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/supports-color.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tree-kill" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/tree-kill.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.bin/uuid.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.yarn-integrity" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.yarn-integrity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt-pbkdf/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt-pbkdf/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/bcrypt-pbkdf/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/has-ansi" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/has-ansi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/has-ansi.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/strip-ansi" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/strip-ansi" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/strip-ansi.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/supports-color" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/supports-color" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/chalk/node_modules/.bin/supports-color.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/concurrently/node_modules/.bin/tree-kill" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/concurrently/node_modules/.bin/tree-kill" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/concurrently/node_modules/.bin/tree-kill.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domutils/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domutils/lib/querying.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domutils/lib/querying.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domutils/lib/stringify.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domutils/lib/stringify.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domutils/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domutils/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/domutils/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/domutils/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/lib/LICENSE-jsbn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/lib/ec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/lib/sec.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ecc-jsbn/test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/.travis.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/legacy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/manipulation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/querying.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/stringify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/lib/traversal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/test/fixture.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/test/tests/helpers.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/test/tests/legacy.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/test/tests/traversal.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/htmlparser2/node_modules/domutils/test/utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-conv" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-conv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-conv.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-sign" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-sign" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-sign.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-verify" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-verify" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/http-signature/node_modules/.bin/sshpk-verify.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/.npmignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/example.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/example.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsbn/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsonwebtoken/node_modules/ms/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsonwebtoken/node_modules/ms/license.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsonwebtoken/node_modules/ms/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/jsonwebtoken/node_modules/ms/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ms/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ms/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/ms/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/ms/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/passport-jwt/node_modules/ms/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/passport-jwt/node_modules/ms/license.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/passport-jwt/node_modules/ms/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/passport-jwt/node_modules/ms/readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/request/node_modules/.bin/uuid" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/request/node_modules/.bin/uuid" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/request/node_modules/.bin/uuid.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/send/node_modules/.bin/mime" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/send/node_modules/.bin/mime" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/send/node_modules/.bin/mime.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -140,7 +22,7 @@
             <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/track.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
-                  <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+                  <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -148,17 +30,16 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="810">
+                <state relative-caret-position="855">
                   <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
                   <folding>
                     <element signature="e#52#136#0" expanded="true" />
-                    <element signature="e#295#354#0" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="configureStore.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="configureStore.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/redux/Store/configureStore.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="285">
@@ -174,11 +55,8 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/containers/Tracks/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
+                <state relative-caret-position="240">
                   <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-                  <folding>
-                    <element signature="e#0#26#0" expanded="true" />
-                  </folding>
                 </state>
               </provider>
             </entry>
@@ -186,11 +64,10 @@
           <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="300">
-                  <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+                <state relative-caret-position="450">
+                  <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
                   <folding>
                     <element signature="e#0#26#0" expanded="true" />
-                    <element signature="e#433#435#0" />
                   </folding>
                 </state>
               </provider>
@@ -208,8 +85,8 @@
           <file leaf-file-name="spec.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/Stream/spec.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="225">
-                  <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+                <state relative-caret-position="210">
+                  <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#33#0" expanded="true" />
                   </folding>
@@ -220,7 +97,7 @@
           <file leaf-file-name="actions.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="645">
+                <state relative-caret-position="630">
                   <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
                   <folding>
                     <element signature="n#!!doc" expanded="true" />
@@ -238,14 +115,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/client/src/components/Stream/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-                  <folding>
-                    <element signature="e#507#533#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="225">
+                  <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
                 </state>
               </provider>
             </entry>
@@ -257,7 +131,7 @@
           <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/server.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="201">
+                <state relative-caret-position="585">
                   <caret line="39" selection-start-line="39" selection-end-line="40" />
                   <folding>
                     <element signature="e#1250#1875#0" />
@@ -269,15 +143,10 @@
           <file leaf-file-name="auth.js" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/auth.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="314">
+                <state relative-caret-position="465">
                   <caret line="31" selection-start-line="31" selection-end-line="37" />
                 </state>
               </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="users.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/db/users.js">
-              <provider selected="true" editor-type-id="text-editor" />
             </entry>
           </file>
           <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
@@ -313,8 +182,8 @@
           <file leaf-file-name="epics.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/client/src/redux/actions/epics.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="328">
-                  <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+                <state relative-caret-position="15">
+                  <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
                   <folding>
                     <element signature="e#86#145#0" expanded="true" />
                   </folding>
@@ -430,103 +299,6 @@
             <path>
               <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
               <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Header" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="Stream" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="constants" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="containers" type="462c0819:PsiDirectoryNode" />
-              <item name="Tracks" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="actions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="reducers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
-              <item name="client" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="redux" type="462c0819:PsiDirectoryNode" />
-              <item name="Store" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather_passport" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather_passport" type="462c0819:PsiDirectoryNode" />
               <item name="db" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -595,27 +367,28 @@
       <workItem from="1523335897841" duration="26455000" />
       <workItem from="1523422654739" duration="599000" />
       <workItem from="1523809890088" duration="4990000" />
-      <workItem from="1523854957926" duration="31582000" />
+      <workItem from="1523854957926" duration="33261000" />
+      <workItem from="1523940666171" duration="302000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105340000" />
+    <option name="totallyTimeSpent" value="107321000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1032" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15919873" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15919873" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5002636" side_tool="true" visible="true" weight="0.2777778" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007907" side_tool="true" visible="true" weight="0.2777778" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49973643" visible="true" weight="0.2777778" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49920928" visible="true" weight="0.2777778" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
@@ -637,6 +410,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/client/src/containers/Towns/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="97" column="9" selection-start-line="97" selection-start-column="9" selection-end-line="97" selection-end-column="9" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/epics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="19" column="50" lean-forward="true" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
+          <folding>
+            <element signature="e#86#145#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/assets/style/App.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -672,9 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="58" column="51" lean-forward="true" selection-start-line="58" selection-start-column="51" selection-end-line="58" selection-end-column="51" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -696,14 +486,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="34" column="15" lean-forward="true" selection-start-line="34" selection-start-column="15" selection-end-line="34" selection-end-column="15" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#1006#1197#0" />
-            <element signature="e#4000#4489#0" />
-            <element signature="e#4520#4796#0" />
-            <element signature="e#4822#5077#0" />
-            <element signature="e#5113#5364#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -779,9 +561,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="35" column="30" selection-start-line="35" selection-start-column="30" selection-end-line="35" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,9 +577,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="18" column="10" selection-start-line="18" selection-start-column="10" selection-end-line="18" selection-end-column="10" />
-          <folding>
-            <element signature="e#48#74#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -814,12 +590,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/users.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
+        <state relative-caret-position="585">
           <caret line="39" selection-start-line="39" selection-end-line="40" />
           <folding>
             <element signature="e#1250#1875#0" />
@@ -831,9 +604,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" selection-start-line="4" selection-end-line="4" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -844,19 +614,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/constants.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="7" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/registerServiceWorker.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/constants.js" />
     <entry file="file://$PROJECT_DIR$/auth.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="465">
           <caret line="31" selection-start-line="31" selection-end-line="37" />
         </state>
       </provider>
@@ -865,16 +626,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="465">
           <caret line="31" lean-forward="true" selection-start-line="31" selection-end-line="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/epics.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="e#86#145#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -896,13 +647,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="49" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#202#214#0" />
-            <element signature="e#1980#2054#0" />
-            <element signature="e#2791#2814#0" />
-            <element signature="e#6812#6816#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -917,10 +661,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="41" column="1" lean-forward="true" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#59#0" expanded="true" />
-            <element signature="e#96#123#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -935,14 +675,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="593">
           <caret line="275" selection-start-line="275" selection-end-line="275" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-            <element signature="e#1006#1197#0" />
-            <element signature="e#4000#4489#0" />
-            <element signature="e#4520#4796#0" />
-            <element signature="e#4822#5077#0" />
-            <element signature="e#5113#5364#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -950,9 +682,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="19" column="5" lean-forward="true" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -960,29 +689,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/containers/Tracks/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="240">
           <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
+        <state relative-caret-position="855">
           <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
           <folding>
             <element signature="e#52#136#0" expanded="true" />
-            <element signature="e#295#354#0" />
           </folding>
         </state>
       </provider>
@@ -990,7 +712,58 @@
     <entry file="file://$PROJECT_DIR$/client/src/redux/reducers/track.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/track.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="57" selection-start-column="57" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="43" column="27" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/presenter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/spec.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -1005,57 +778,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/track.js">
+    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/epics.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="57" selection-start-column="57" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/redux/actions/actions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="44" column="2" selection-start-line="44" selection-start-column="2" selection-end-line="44" selection-end-column="2" />
+        <state relative-caret-position="15">
+          <caret line="19" column="50" selection-start-line="19" selection-start-column="50" selection-end-line="19" selection-end-column="50" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="43" column="27" lean-forward="true" selection-start-line="43" selection-start-column="27" selection-end-line="43" selection-end-column="27" />
-          <folding>
-            <element signature="e#0#26#0" expanded="true" />
-            <element signature="e#433#435#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/presenter.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/spec.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/Stream/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="38" column="30" lean-forward="true" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-          <folding>
-            <element signature="e#507#533#0" expanded="true" />
+            <element signature="e#86#145#0" expanded="true" />
           </folding>
         </state>
       </provider>
