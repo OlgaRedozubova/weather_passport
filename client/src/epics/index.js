@@ -2,6 +2,7 @@ import { combineEpics } from 'redux-observable';
 import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_SECRET} from "../constants/ActionTypes";
 import { fetchUserFulfilled } from "../actions";
 import { fetchSecretFulfilled } from "../actions";
+import { authFailure } from "../actions";
 
 
 const pingEpic = action$ =>
@@ -24,46 +25,25 @@ const authEpic = action$ =>
 
 const fetchUserEpic = action$ =>
     action$.ofType(AUTH_REQUEST)
-        .do(action => console.log('fetchUserEpic', action))
         .mergeMap(action =>
                 submitToServer(action.payload, action.password)
-                .then(response => {return response.token})
-                .catch(err => console.log('err', err))
-        ).map(response => fetchUserFulfilled(response));
-
-
-const fetchSecterEpic = action$ =>
-    action$.ofType(AUTH_SECRET)
-        .mergeMap(action =>
-            getSecretToServer(action.payload)
-                .then(response => {
-                    console.log('SecretEpic', response);
-                    return response.password
+                .then( response => {
+                    if (response.status === 200) {
+                        return response.json()
+                    } else {
+                        return ''
+                    }
                 })
+                .then((response) => {
+                        return response.token}
+                )
                 .catch(err => console.log('err', err))
         )
-        .map(response => fetchSecretFulfilled(response));
+        .map(response => fetchUserFulfilled(response));
 
-
-async function getSecretToServer(token) {
-    console.log('getSecrettoServer', token);
-    try {
-        const response = await fetch('/api/user', {
-            method: 'GET',
-            headers: {
-                "Authorization": "JWT " + token
-            }
-        });
-        const body = await response.json();
-        return body;
-    } catch(error) {
-        return error;
-    }
-}
 
 
 async function submitToServer(username, password) {
-    console.log('submitToServer', username, password);
     try {
         const response = await fetch('/api/token', {
             method: 'POST',
@@ -74,6 +54,47 @@ async function submitToServer(username, password) {
                 name: username,
                 password: password
             }),
+        });
+        // console.log(response);
+        // const body = await response.json();
+        // console.log('body', body);
+        // if(response.status === 401) {
+        //     return body.message
+        // } else {
+        //     //console.log('response.token = ', response.token);
+        //     return body.token;
+        // }
+
+        // const body = await response.json();
+        return await response;
+        // return body;
+    } catch(error) {
+        return error;
+    }
+}
+
+
+const fetchSecterEpic = action$ =>
+    action$.ofType(AUTH_SECRET)
+        .mergeMap(action =>
+            getSecretToServer(action.payload)
+                .then(response => {
+                    return response.name
+                })
+                .catch(err => console.log('err', err))
+        )
+        .map(response => fetchSecretFulfilled(response)
+        );
+
+
+async function getSecretToServer(token) {
+    console.log('getSecrettoServer', token);
+    try {
+        const response = await fetch('/api/user', {
+            method: 'GET',
+            headers: {
+                "Authorization": "JWT " + token
+            }
         });
         const body = await response.json();
         return body;

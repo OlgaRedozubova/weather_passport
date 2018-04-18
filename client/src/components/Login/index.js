@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { authRequest } from '../../actions';
-import {fetchSecret} from '../../actions';
+import { authSecret } from '../../actions';
+import { authFailure } from '../../actions';
 import LoginForm from '../LoginForm';
 
 
@@ -12,6 +13,7 @@ class Login extends Component{
             user: '',
             password: '',
             token: '',
+            isLogin: false,
             auth: {}
         }
     }
@@ -34,15 +36,26 @@ class Login extends Component{
 
     auth = (username, password) => {
         this.props.onAddTodo(username, password);
+        //this.props.getSecret(this.props.token);
+        //setTimeout(() => {this.props.getSecret(this.props.token)}, 100);
     };
+
+
 
     render() {
         //console.log('props', this.auth);
         return(
             <div className="login">
                 <LoginForm login = {this.auth}/>
-
-                <h1>mass {this.props.mass} = {this.props.payload}</h1>
+                <div>
+                    <p>mes = {this.props.mess}</p>
+                    <p>username = {this.props.username}</p>
+                    <p>password = {this.props.password}</p>
+                    <p>token = {this.props.token}</p>
+                    <p>payload = {this.props.payload}</p>
+                    <p>isLogin = {this.props.isLogin.toString()}</p>
+                </div>
+                <h1>mess {this.props.mess} = {this.props.token}</h1>
                 <button onClick={() =>this.props.onAddTodo('test')}>Start PING</button>
                 {/*<button onClick={this.onAddTodo}>Start PING</button>*/}
 
@@ -83,14 +96,17 @@ class Login extends Component{
 }
 
 function mapStateToProps (state) {
-    const mass = state.authReducer.mass;
-    console.log('mapStateToProps mass = ', state);
-    console.log('mass', mass);
+    const mess = state.authReducer.mess;
+    console.log('mapStateToProps mess = ', state);
+    console.log('mess', mess);
     console.log('payload', state.authReducer.payload);
     return {
-        mass: mass,
+        mess: mess,
+        username: state.authReducer.username,
         payload: state.authReducer.payload,
-        password: state.authReducer.password
+        password: state.authReducer.password,
+        token: state.authReducer.token,
+        isLogin: state.authReducer.isLogin,
     }
 };
 
@@ -100,18 +116,19 @@ const mapDispatchToProps = (dispatch) => {
             //console.log('mapDispatchToProps', username, password);
             dispatch(authRequest(username, password))
         },
-        getSecret: (value) => { dispatch(fetchSecret(value))
+        getSecret: (token) => {
+            console.log('token!!!', token);
+            if (token){dispatch(authSecret(token))
+            }else {
+                dispatch(authFailure())
+            }
         }
-        //deleteContact: index => dispatch(contactAction.deleteContact(index))
     }
-}
+};
 
 Login = connect(
     mapStateToProps,
     mapDispatchToProps
-    //{ auth }
 )(Login);
 
 export default Login;
-//export default connect(mapStateToProps, mapDispatchToProps)(Login);
-//export default connect(mapStateToProps, { counter })(Login);

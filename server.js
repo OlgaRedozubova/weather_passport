@@ -45,6 +45,7 @@ server.get("/api/user", auth.authenticate(), function(req, res) {
 
 //возвращает token и id user
 server.post("/api/token", function(req, res) {
+    console.log('Server, token');
     if (req.body.name && req.body.password) {
         var userName = req.body.name;
         var password = req.body.password;
@@ -61,9 +62,12 @@ server.post("/api/token", function(req, res) {
                 token: token
             });
         } else {
-            res.sendStatus(401);
+            console.log('res.sendStatus(401)');
+            res.status(401).json({message: "passwords did not match"});
+         //   res.sendStatus(401);
         }
     } else {
+        console.log('res.sendStatus(401)');
         res.sendStatus(401);
     }
 });

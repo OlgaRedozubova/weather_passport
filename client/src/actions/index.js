@@ -6,7 +6,6 @@ export const auth = (username) =>(
     {
         type: AUTH_SUCCESS,
         payload: username,
-        mess: 'OK'
     }
     );
 
@@ -15,30 +14,33 @@ export const authRequest = (username, password) => (
     {
         type: AUTH_REQUEST,
         payload: username,
-        password: password,
-        mess: 'OK'
+        username:username,
+        password: password
     }
     );
 
 export const fetchUserFulfilled = payload => (
     {
         type: AUTH_TOKEN,
+        token: payload,
         payload
     }
     );
 
-export const fetchSecret = token => (
+export const authSecret = token => (
     {
         type: AUTH_SECRET,
         payload: token,
-        mess: 'OK'
+        token: token
     }
 );
 
-export const fetchSecretFulfilled = payload => (
+export const fetchSecretFulfilled = (payload) => (
     {
         type: AUTH_SECRET_OK,
-        payload
+        //isLogin: isLogin,
+        username:payload,
+        payload: payload
     }
 );
 
@@ -46,7 +48,7 @@ export const fetchSecretFulfilled = payload => (
 export const authFailure = payload => (
     {
         type: AUTH_FAILURE,
-        mess: 'No'
+        payload
     }
 );
 
