@@ -2,6 +2,17 @@ import React from 'react';
 import  { connect } from 'react-redux';
 import {ping} from '../../actions';
 
+function checkLogin() {
+    console.log('checkLogin');
+    const token = window.localStorage.getItem('rr_token');
+    if (token !== '') {
+        console.log('GO')
+    }
+    // if (login === 'admin') {
+    //     console.log('пропусти')
+    // }
+}
+
 let AppPP = ({ isPinging, ping }) => (
     <div>
 

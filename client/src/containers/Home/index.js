@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Button, Form, FormGroup, ControlLabel, FormControl, Grid, Row, Col, Table } from 'react-bootstrap';
 
 import Weather from '../../components/Weather/index';
+import {connect} from "react-redux";
 
 class Index extends Component {
 
@@ -193,6 +194,7 @@ getValidationState() {
 
     render(){
         const listTowns = [...this.state.body];
+        console.log('Home', this.props.token);
         return (
             <div className="home">
                 <Form inline onSubmit={this.setCity}>
@@ -279,4 +281,15 @@ getValidationState() {
     }
 }
 
-export default Index;
+function mapStateToProps (state) {
+    return {
+        username: state.authReducer.username,
+        token: state.authReducer.token,
+    }
+};
+
+export default connect(
+    mapStateToProps
+)(Index);
+
+//export default Index;

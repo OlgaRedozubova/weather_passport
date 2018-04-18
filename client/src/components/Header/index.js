@@ -1,19 +1,26 @@
 import  React from 'react';
-import { NavLink } from 'react-router-dom';
+import Menu from '../Menu';
 
 //import logo from '../../assets/images/logo.svg';
 
 export default () => {
-    return(
-        <header className="App-header">
-            {/*<img src={logo} className="App-logo" alt="logo" />*/}
-            <h1 className="App-title">Weather in the town</h1>
+    function getSingIn() {
 
-            <nav className="nav">
-                <NavLink to="/" exact={true} activeClassName="selected">Home</NavLink>
-                <NavLink to="/login" activeClassName="selected">Sing In</NavLink>
-                <NavLink to="/appPP" activeClassName="selected">AppPP</NavLink>
-            </nav>
+    }
+    return(
+        <header >
+            {/*<img src={logo} className="App-logo" alt="logo" />*/}
+
+            <div className="top">
+                <button onClick={getSingIn}>Sing In</button>
+                <button>Sing Out</button>
+            </div>
+
+            <div className="App-header">
+                <h1 className="App-title">Weather in the town</h1>
+                <a href="/appPP">App</a>
+                <Menu/>
+            </div>
         </header>
     )
 }

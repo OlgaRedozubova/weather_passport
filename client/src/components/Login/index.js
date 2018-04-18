@@ -44,9 +44,14 @@ class Login extends Component{
 
     render() {
         //console.log('props', this.auth);
+        window.localStorage.setItem('rr_token', this.props.token);
+
         return(
             <div className="login">
-                <LoginForm login = {this.auth}/>
+                { !this.props.token &&
+                    <LoginForm login = {this.auth}/>
+                }
+
                 <div>
                     <p>mes = {this.props.mess}</p>
                     <p>username = {this.props.username}</p>

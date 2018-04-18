@@ -41,8 +41,6 @@ const fetchUserEpic = action$ =>
         )
         .map(response => fetchUserFulfilled(response));
 
-
-
 async function submitToServer(username, password) {
     try {
         const response = await fetch('/api/token', {
@@ -55,19 +53,7 @@ async function submitToServer(username, password) {
                 password: password
             }),
         });
-        // console.log(response);
-        // const body = await response.json();
-        // console.log('body', body);
-        // if(response.status === 401) {
-        //     return body.message
-        // } else {
-        //     //console.log('response.token = ', response.token);
-        //     return body.token;
-        // }
-
-        // const body = await response.json();
         return await response;
-        // return body;
     } catch(error) {
         return error;
     }
