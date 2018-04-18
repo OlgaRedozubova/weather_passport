@@ -15,10 +15,11 @@ p{
   background-color: #222;
   align-items: center;
   justify-content: space-between;
-  margin: auto;
+  /*margin: auto;*/
   /*height: 150px;*/
   padding: 5px 15px;
   color: white;
+  margin-bottom: 15px;
 }
 
 .App-title {
@@ -94,6 +95,12 @@ p{
 .title_left {
     border-top: 1px solid rgb(221, 221, 221);
 }
+
+.login form {
+  width: 500px;
+  margin: auto;
+}
+
 
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }

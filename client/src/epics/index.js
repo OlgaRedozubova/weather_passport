@@ -1,6 +1,5 @@
 import { combineEpics } from 'redux-observable';
-import { ajax } from 'rxjs/observable/dom/ajax';
-import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_SECRET_OK} from "../constants/ActionTypes";
+import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_SECRET} from "../constants/ActionTypes";
 import { fetchUserFulfilled } from "../actions";
 import { fetchSecretFulfilled } from "../actions";
 
@@ -25,8 +24,9 @@ const authEpic = action$ =>
 
 const fetchUserEpic = action$ =>
     action$.ofType(AUTH_REQUEST)
+        .do(action => console.log('fetchUserEpic', action))
         .mergeMap(action =>
-                submitToServer(action.payload)
+                submitToServer(action.payload, action.password)
                 .then(response => {return response.token})
                 .catch(err => console.log('err', err))
         ).map(response => fetchUserFulfilled(response));
@@ -62,7 +62,8 @@ async function getSecretToServer(token) {
 }
 
 
-async function submitToServer(data) {
+async function submitToServer(username, password) {
+    console.log('submitToServer', username, password);
     try {
         const response = await fetch('/api/token', {
             method: 'POST',
@@ -70,8 +71,8 @@ async function submitToServer(data) {
                 'Content-type': 'application/json',
             },
             body: JSON.stringify({
-                name: data,
-                password: 'test'
+                name: username,
+                password: password
             }),
         });
         const body = await response.json();

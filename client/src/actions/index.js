@@ -2,24 +2,6 @@ import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_
 
 export const ping = () => ({type: 'PING'});
 
-// export const authRequest = (token) => (
-//     {
-//         type: AUTH_REQUEST,
-//         payload: { token }
-//     }
-// );
-//
-// export const authSuccess = (user) => (
-//     {
-//         type: AUTH_SUCCESS,
-//         payload: { user }
-//     }
-// );
-//
-// export const authFailure = () => ({
-//     type: AUTH_FAILURE
-// });
-
 export const auth = (username) =>(
     {
         type: AUTH_SUCCESS,
@@ -29,10 +11,11 @@ export const auth = (username) =>(
     );
 
 //action creator
-export const fetchUser = username => (
+export const authRequest = (username, password) => (
     {
         type: AUTH_REQUEST,
         payload: username,
+        password: password,
         mess: 'OK'
     }
     );
@@ -59,16 +42,13 @@ export const fetchSecretFulfilled = payload => (
     }
 );
 
-// export const auth = (username) => {
-//     console.log('username', username);
-//     dispatch(
-//         {
-//             type: AUTH_SUCCESS,
-//             payload: username,
-//             mass: 'S'
-//         }
-//     )
-// };
+
+export const authFailure = payload => (
+    {
+        type: AUTH_FAILURE,
+        mess: 'No'
+    }
+);
 
 export const counter = () => ({type: 'INCREMENT_COUNTER'});
 

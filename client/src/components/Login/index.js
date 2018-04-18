@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import {counter} from '../../actions';
-import {auth} from '../../actions';
-import {fetchUser} from '../../actions';
+import { authRequest } from '../../actions';
 import {fetchSecret} from '../../actions';
+import LoginForm from '../LoginForm';
 
 
 class Login extends Component{
@@ -13,6 +12,7 @@ class Login extends Component{
             user: '',
             password: '',
             token: '',
+            auth: {}
         }
     }
 
@@ -32,10 +32,16 @@ class Login extends Component{
         this.props.getSecret(this.props.payload);
     };
 
+    auth = (username, password) => {
+        this.props.onAddTodo(username, password);
+    };
+
     render() {
-        console.log('props', this.props);
+        //console.log('props', this.auth);
         return(
-            <div>
+            <div className="login">
+                <LoginForm login = {this.auth}/>
+
                 <h1>mass {this.props.mass} = {this.props.payload}</h1>
                 <button onClick={() =>this.props.onAddTodo('test')}>Start PING</button>
                 {/*<button onClick={this.onAddTodo}>Start PING</button>*/}
@@ -83,24 +89,16 @@ function mapStateToProps (state) {
     console.log('payload', state.authReducer.payload);
     return {
         mass: mass,
-        payload: state.authReducer.payload
+        payload: state.authReducer.payload,
+        password: state.authReducer.password
     }
 };
 
 const mapDispatchToProps = (dispatch) => {
     return {
-
-        onAddTodo: (value) => {
-
-            dispatch(
-                fetchUser(value)
-                //auth(value)
-            //{
-                // type: 'AUTH_SUCCESS',
-                // payload: value,
-                // mass: 'S'
-            //}
-              )
+        onAddTodo: (username, password) => {
+            //console.log('mapDispatchToProps', username, password);
+            dispatch(authRequest(username, password))
         },
         getSecret: (value) => { dispatch(fetchSecret(value))
         }
