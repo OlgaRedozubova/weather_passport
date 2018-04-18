@@ -8,6 +8,8 @@ import Header from './components/Header';
 import Home from './containers/Home';
 import Login from './components/Login';
 import AppPP from './components/AppPP';
+import {PrivateRoute} from './components/Route/PrivateRoute';
+
 
 
 class App extends Component {
@@ -20,15 +22,10 @@ class App extends Component {
                     <Header/>
                     <Route exact path="/" component={Home} />
                     <Route path="/login" component={Login} />
-                    {/*<Route path="/appPP" component={AppPP}  onEnter={()=> {console.log('Go')}} />*/}
-                    <Route path="/appPP" render ={() => (
-                        window.localStorage.getItem('rr_token') ? (
-                            <AppPP/>
-                        ) : (
-                            <Redirect to="/login"/>
 
-                        )
-                    )} />
+                    <PrivateRoute path="/appPP" component={AppPP} />
+                    {/*<Route path="/appPP" component={AppPP}  onEnter={()=> {console.log('Go')}} />*/}
+
                 </div>
             </Router>
         );

@@ -4,6 +4,7 @@ import { authRequest } from '../../actions';
 import { authSecret } from '../../actions';
 import { authFailure } from '../../actions';
 import LoginForm from '../LoginForm';
+import  { Redirect } from 'react-router-dom';
 
 
 class Login extends Component{
@@ -45,11 +46,18 @@ class Login extends Component{
     render() {
         //console.log('props', this.auth);
         window.localStorage.setItem('rr_token', this.props.token);
-
+        const re = window.localStorage.getItem('rr_token');
+        console.log('re', re);
+        //if (window.localStorage.setItem('rr_token', this.props.token))
+        if (re !== '')
+        {
+            return <Redirect to="/"/>;
+        }
         return(
             <div className="login">
                 { !this.props.token &&
                     <LoginForm login = {this.auth}/>
+                    //<Redirect to="/login"/>
                 }
 
                 <div>
@@ -60,39 +68,39 @@ class Login extends Component{
                     <p>payload = {this.props.payload}</p>
                     <p>isLogin = {this.props.isLogin.toString()}</p>
                 </div>
-                <h1>mess {this.props.mess} = {this.props.token}</h1>
-                <button onClick={() =>this.props.onAddTodo('test')}>Start PING</button>
+
+                {/*<h1>mess {this.props.mess} = {this.props.token}</h1>*/}
+                {/*<button onClick={() =>this.props.onAddTodo('test')}>Start PING</button>*/}
                 {/*<button onClick={this.onAddTodo}>Start PING</button>*/}
 
+                {/*<h2>Login in</h2>*/}
+                {/*<form name='login'>*/}
+                    {/*<div className='form-group'>*/}
+                        {/*<label>Username</label>*/}
+                        {/*<input*/}
+                            {/*className="form-control input-lg"*/}
+                            {/*type='text'*/}
+                            {/*ref={(input) => {this.UserInput = input}}*/}
+                            {/*id='login'*/}
+                            {/*placeholder='Username' />*/}
 
-                <h2>Login in</h2>
-                <form name='login'>
-                    <div className='form-group'>
-                        <label>Username</label>
-                        <input
-                            className="form-control input-lg"
-                            type='text'
-                            ref={(input) => {this.UserInput = input}}
-                            id='login'
-                            placeholder='Username' />
+                        {/*<label>Password</label>*/}
+                        {/*<input*/}
+                            {/*className="form-control input-lg"*/}
+                            {/*type='text'*/}
+                            {/*ref={(input) => {this.PasswordInput = input}}*/}
+                            {/*id='password'*/}
+                            {/*placeholder='Password' />*/}
+                    {/*</div>*/}
 
-                        <label>Password</label>
-                        <input
-                            className="form-control input-lg"
-                            type='text'
-                            ref={(input) => {this.PasswordInput = input}}
-                            id='password'
-                            placeholder='Password' />
-                    </div>
+                    {/*<button className="btn btn-lg btn-success" type='submit' onClick={this.login}>Submit</button>*/}
+                    {/*<div id="token">{this.props.payload}</div>*/}
+                    {/*/!*<button className="btn btn-lg btn-success" onClick={this.getSecret}>Submit</button>*!/*/}
+                    {/*/!*<div id="result"></div>*!/*/}
+                {/*</form>*/}
 
-                    <button className="btn btn-lg btn-success" type='submit' onClick={this.login}>Submit</button>
-                    <div id="token">{this.props.payload}</div>
-                    {/*<button className="btn btn-lg btn-success" onClick={this.getSecret}>Submit</button>*/}
-                    {/*<div id="result"></div>*/}
-                </form>
-
-                <button onClick={this.getSecret}>get secret message</button>
-                <div id="result"></div>
+                {/*<button onClick={this.getSecret}>get secret message</button>*/}
+                {/*<div id="result"></div>*/}
 
             </div>
         )
