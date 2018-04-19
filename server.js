@@ -59,7 +59,8 @@ server.post("/api/token", function(req, res) {
             console.log('id', payload.id);
             var token = jwt.encode(payload, config.jwtSecret);
             res.json({
-                token: token
+                token: token,
+                username: user.name
             });
         } else {
             console.log('res.sendStatus(401)');

@@ -9,6 +9,21 @@ p{
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
+.App header{
+  display: flex;
+  flex-direction: column;
+}
+/*.App .top {*/
+  /*display: flex;*/
+  /*justify-content: space-between;*/
+/*}*/
+.top_login {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 30px;
+
+}
 
 .App-header {
   display: flex;

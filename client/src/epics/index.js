@@ -2,7 +2,6 @@ import { combineEpics } from 'redux-observable';
 import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_SECRET} from "../constants/ActionTypes";
 import { fetchUserFulfilled } from "../actions";
 import { fetchSecretFulfilled } from "../actions";
-import { authFailure } from "../actions";
 
 
 const pingEpic = action$ =>
@@ -34,12 +33,11 @@ const fetchUserEpic = action$ =>
                         return ''
                     }
                 })
-                .then((response) => {
-                        return response.token}
+                .then((response) => {return response}
                 )
                 .catch(err => console.log('err', err))
         )
-        .map(response => fetchUserFulfilled(response));
+        .map(response => fetchUserFulfilled(response.token, response.username));
 
 async function submitToServer(username, password) {
     try {

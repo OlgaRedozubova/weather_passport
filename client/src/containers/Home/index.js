@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, ControlLabel, FormControl, Grid, Row, Col, Tab
 import Weather from '../../components/Weather/index';
 import {connect} from "react-redux";
 
-class Index extends Component {
+class Home extends Component {
 
     state = {
         response: '',
@@ -290,6 +290,5 @@ function mapStateToProps (state) {
 
 export default connect(
     mapStateToProps
-)(Index);
+)(Home);
 
-//export default Index;

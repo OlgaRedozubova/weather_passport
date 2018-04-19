@@ -1,4 +1,4 @@
-import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_SECRET_OK} from "../constants/ActionTypes";
+import {AUTH_FAILURE, AUTH_REQUEST, AUTH_SUCCESS, AUTH_TOKEN, AUTH_SECRET, AUTH_SECRET_OK, AUTH_SINGOUT} from "../constants/ActionTypes";
 
 export const ping = () => ({type: 'PING'});
 
@@ -19,11 +19,12 @@ export const authRequest = (username, password) => (
     }
     );
 
-export const fetchUserFulfilled = payload => (
+export const fetchUserFulfilled = (token, username) => (
     {
         type: AUTH_TOKEN,
-        token: payload,
-        payload
+        token: token,
+        username: username,
+        payload: token
     }
     );
 
@@ -52,5 +53,9 @@ export const authFailure = payload => (
     }
 );
 
-export const counter = () => ({type: 'INCREMENT_COUNTER'});
+export const authSingOut = () => (
+    {
+        type: AUTH_SINGOUT
+    }
+);
 
